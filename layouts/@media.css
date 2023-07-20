@@ -1,0 +1,42 @@
+
+@media screen and (min-width: 600px) {
+    .header_container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_logo_container {
+        padding: 20px
+    }
+
+    .navbar_item{
+        padding: 20px;
+    }
+
+    .main_container{
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .gallery_main_container{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .gallery_img_container{
+        width: auto;
+    }
+
+}
+
+@media screen and (min-width: 1080px){
+    .gallery_main_container{
+        justify-content: space-between;
+        padding: 0;
+    } 
+}
+
+
