@@ -1,23 +1,61 @@
 
-.header{
-    background-color: lightcoral;
-    text-align: center;
-}
-.header_container {
-    max-width: 1120px;
-}
+/*** NAVBAR MENU NM ***/
 
 .header_logo_container{
-    display: block;
-    padding-top: 10px;
+    font-weight: 600;
 }
 
-.navbar_item{
-    display: inline-block;
-    padding: 10px 10px;
+nav {
+    background: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: calc(.5rem + 1.5vw);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    top: 3.5%;
+    width: 100%;
+    background: lightblue;
+    text-align: center;
+    transition: .3s;
+
+}
+
+nav li {
+    padding: 3px 0;
+}
+
+nav li:hover{
+    background: rgb(161, 215, 236);
+}
+
+.navbar_item {
     text-transform: uppercase;
 }
 
-.navbar_item:hover {
-    text-decoration: underline;
+/*** MENU BURGER MENU NM***/
+#icons{
+    display: block;
+    cursor: pointer;
+}
+
+#icons::before{
+    content: '\2630';
+}
+
+/*** MENU BURGER MENU ACTIVE***/
+.active #icons::before {
+    content: '\2715';
+}
+
+/*** NAVBAR MENU ACTIVE ***/
+nav.active ul {
+    left: 0;
 }

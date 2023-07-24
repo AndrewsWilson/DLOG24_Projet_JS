@@ -1,18 +1,16 @@
 
 @media screen and (min-width: 600px) {
-    .header_container {
-        margin: 0 auto;
+
+    /*** HEADER ***/
+    nav ul {
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
+        width: 60%;
+        position: static;
     }
 
-    .header_logo_container {
-        padding: 20px
-    }
-
-    .navbar_item{
-        padding: 20px;
-    }
+    /*** MAIN ***/
 
     .main_container{
         margin: 0 auto;
@@ -29,6 +27,11 @@
     .gallery_img_container{
         width: auto;
     }
+
+    #icons{
+        display: none;
+    }
+
 
 }
 

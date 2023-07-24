@@ -5,7 +5,6 @@ function fetchArticle(url) {
     .then(data => createArticles(data.jokes))// renvoie les donnée du tableau joke présent dans les DATA récupéré et les envoie dans la fonction createArticle
 }
 
-
 // fonction createArticles permettant de crée un article en exploitant les donnée récupéré dans la première fonction
 function createArticles(jokes) { // création de la fonction createArticle
     const container = document.getElementsByClassName('main_container')[0]; // stockage du main_container dans la var container
@@ -38,6 +37,20 @@ function createArticles(jokes) { // création de la fonction createArticle
     }
 }
 
+
+function showResponsiveMenu() { // fonction menu DropDown
+    var menu = document.getElementById("topnav_responsive_menu"); // je récupère mon menu responsive je le stock dans menu
+    var icon = document.getElementById("topnav_hamburger_icon"); // je récupère mon burger je le stock dans icon
+    var root = document.getElementById("root_menu"); // je récupère le header que je stock dans root
+
+    if (menu.className === "") {
+        menu.className = "open";
+        icon.className = "open";
+        root.style.overflowY = "";
+    }
+}
+
+
 // Appel de la fonction fetchArticle avec son paramètre (API joke)
 fetchArticle('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10');
 
@@ -50,3 +63,15 @@ btn = document.getElementById('actualiser');
 btn.addEventListener("click", ()=> { 
    fetchArticle('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10');
   } );
+
+
+// JS connais déja l'ID icons raison pour laquelle je l'ai apeller ainsi dans mon HTML 
+// ainsi il sais exactement qu'elle est l'élément concernant sans faire de getElementById
+icons.addEventListener("click",()=>{
+    //JS connais également l'ID nav voir explication plus haut
+    // classList.toggle permet de dire : 
+    // si sur nav la class active n'existe pas tu l'ajoute
+    // si elle existe tu la retire
+    // ainsi je peux effectuer les modification faite en CSS pour la class active
+    nav.classList.toggle("active");
+})
