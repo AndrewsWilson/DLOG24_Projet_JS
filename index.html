@@ -11,11 +11,6 @@
     <meta name="description" content="projet JS DLOG24 campus-numérique">
 </head>
 <body>
-
-
-
-
-
     <header class="header" id="root_menu">
 
 
@@ -38,18 +33,27 @@
 
 
     </header>
-
-
-
-
-
-
-
     <main class="main">
         <div class="main_container">
             <input id="actualiser" type="submit" value="Actualiser">
         </div>
     </main>
+
+    <section class="form_section">
+        <form  id="add_article">
+            <div class="title_article_input_container">
+                <label class="title_label" for="title">Titre</label>
+                <input type="text" name="title" id="title_input"/>
+            </div>
+            <div class="text_article_input_container">
+                <label class="text_label" for="text">Texte</label>
+                <textarea name="text" id="text_input" cols="30" rows="10"></textarea>
+            </div>
+            <button id="poste">Envoyer</button>
+        </form>
+
+    </section>
+
     <footer class="footer">
         <div class="footer_content">FOOTER</div>
     </footer>
