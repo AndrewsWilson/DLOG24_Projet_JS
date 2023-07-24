@@ -38,13 +38,15 @@ function createArticles(jokes) { // création de la fonction createArticle
     }
 }
 
-
+// Appel de la fonction fetchArticle avec son paramètre (API joke)
 fetchArticle('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10');
 
 
-//const update = document.getElementById('actualiser');
-btn = document.getElementById('actualiser'); // j'appelle mon input actualiser que je stock dans la cons btn
 
-btn.addEventListener("click", ()=> { // methode SI btn est cliquer alors recharge mon fetch
+// j'appelle mon input actualiser que je stock dans la cons btn
+btn = document.getElementById('actualiser'); 
+
+// methode SI btn est cliquer alors recharge mon fetch
+btn.addEventListener("click", ()=> { 
    fetchArticle('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10');
   } );
