@@ -21,7 +21,7 @@ display2.addEventListener("click", ()=> {
     // ajout d'une classe 'd2' a toutes mes div.gallery
     for (const img of galleryImg) {  
         // pour toutes les img du tableau galleryImg faire ->
-        img.classList.remove('d3')
+        img.classList.remove('d3');
         img.classList.add('d2');
     }
    } );
@@ -35,9 +35,14 @@ display3.addEventListener("click", ()=> {
     // retrait de la class 'd2'
     // ajout d'une classe 'd3' a toutes mes div.gallery
     for (const img of galleryImg) {  
-        img.classList.remove('d2')
+        img.classList.remove('d2');
         img.classList.add('d3');
     }
     } );
    
 
+const addImg = document.querySelector('#add_img');
+addImg.addEventListener("click", ()=>{
+    inputContainer = document.querySelector('.input_add_img');
+    inputContainer.classList.toggle("hide");
+} )

@@ -25,16 +25,27 @@
         </nav>
     </header>
     <main class="main gallery_main">
-        <div class="display_controller">
-            <svg class="icon" id="display_1">
-                <use xlink:href="../ressource/img/sprite.svg#d1"></use>
-              </svg>
-            <svg class="icon" id="display_2">
-                <use xlink:href="../ressource/img/sprite.svg#d2"></use>
-            </svg>
-            <svg class="icon" id="display_3">
-                <use xlink:href="../ressource/img/sprite.svg#d3"></use>
-            </svg>
+        <div class="gallery_controller">
+            <div class="display_controller">
+                <svg class="icon" id="display_1">
+                    <use xlink:href="../ressource/img/sprite.svg#d1"></use>
+                  </svg>
+                <svg class="icon" id="display_2">
+                    <use xlink:href="../ressource/img/sprite.svg#d2"></use>
+                </svg>
+                <svg class="icon" id="display_3">
+                    <use xlink:href="../ressource/img/sprite.svg#d3"></use>
+                </svg>
+            </div>
+            <div class="add_img_controller">
+                <svg class="icon" id="add_img">
+                    <use xlink:href="../ressource/img/sprite1.svg#add_img"></use>
+                  </svg>
+            </div>
+        </div>
+        <div class="input_add_img hide">
+            <label for="addimg">Entrer votre url ici : </label>
+            <input type="text" id="addimg" name="add_img">
         </div>
         <div class="gallery_main_container">
             <div class="gallery_img_container">
