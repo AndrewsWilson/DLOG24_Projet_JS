@@ -1,0 +1,40 @@
+.gallery_main{
+    padding: 20px;
+}
+.display_controller {
+    display: none;
+    justify-content: center;
+}
+
+.display_controller svg {
+    margin: 20px;
+    height: 40px;
+    width: 40px;
+    transition: .3s;
+}
+.display_controller svg:hover {
+    cursor: pointer;
+    color: lightblue;
+}
+.gallery_main_container{
+    max-width: 1250px;
+    margin: 20px auto;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery_img_container{
+    transition: all .3s;
+    margin: 20px;
+    width: 100%;
+}
+
+.gallery_img_container img {
+    width: 100%;
+    height: 100%;
+}
+
+

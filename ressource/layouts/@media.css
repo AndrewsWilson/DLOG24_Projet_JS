@@ -1,0 +1,46 @@
+@media screen and (min-width: 600px) {
+
+    /*** HEADER ***/
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 60%;
+        position: static;
+    }
+
+    /*** MAIN ***/
+    .main_container{
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .display_controller {
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery_main_container{
+        padding: 0 20px;
+        justify-content: space-around;
+    } 
+
+    /*** GALLERY 2 IMAGES ***/
+    .d2 {
+        width: 40%;
+    }
+
+    /*** GALLERY 3 IMAGES***/
+    .d3 {
+        width: calc(30% - 40px);
+    }
+
+    /*** BTN BURGER MENU DROPDOWN***/
+    #icons{
+        display: none;
+    }
+
+
+}

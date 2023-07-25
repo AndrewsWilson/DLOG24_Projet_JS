@@ -1,0 +1,61 @@
+
+/*** NAVBAR MENU NM ***/
+
+.header_logo_container{
+    font-weight: 600;
+}
+
+nav {
+    background: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: calc(.5rem + 1.5vw);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    top: 3.5%;
+    width: 100%;
+    background: lightblue;
+    text-align: center;
+    transition: .3s;
+
+}
+
+nav li {
+    padding: 3px 0;
+}
+
+nav li:hover{
+    background: rgb(161, 215, 236);
+}
+
+.navbar_item {
+    text-transform: uppercase;
+}
+
+/*** MENU BURGER MENU NM***/
+#icons{
+    display: block;
+    cursor: pointer;
+}
+
+#icons::before{
+    content: '\2630';
+}
+
+/*** MENU BURGER MENU ACTIVE***/
+.active #icons::before {
+    content: '\2715';
+}
+
+/*** NAVBAR MENU ACTIVE ***/
+nav.active ul {
+    left: 0;
+}
