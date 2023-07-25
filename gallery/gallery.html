@@ -4,71 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+    <title>Gallerie</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header_container">
-            <a class="header_logo_container" href="#">LOGO</a>
-            <nav class="navbar">
-                <a href="../index.html" class="navbar_item">Acceuil</a>
-                <a href="gallery.html" class="navbar_item">Gallerie</a>
-                <a href="../jeux/jeux.html" class="navbar_item">Jeux</a>
-            </nav>
-        </div>
+    <header class="header" id="root_menu">
+        <nav id="nav">
+            <a class="header_logo_container" href="index.html">LOGO</a>
+            <ul>
+                <li>
+                    <a href="../index.html" class="navbar_item">Acceuil</a>
+                </li>
+                <li>
+                    <a href="gallery.html" class="navbar_item">Gallerie</a>
+                </li>
+                <li>
+                    <a href="jeux/jeux.html" class="navbar_item">Jeux</a>
+                </li>
+            </ul>
+            <div id="icons"></div>
+        </nav>
     </header>
     <main class="main gallery_main">
-        <div class="main_container gallery_main_container">
+        <div class="display_controller">
+            <svg class="icon" id="display_1">
+                <use xlink:href="../ressource/img/sprite.svg#d1"></use>
+              </svg>
+            <svg class="icon" id="display_2">
+                <use xlink:href="../ressource/img/sprite.svg#d2"></use>
+            </svg>
+            <svg class="icon" id="display_3">
+                <use xlink:href="../ressource/img/sprite.svg#d3"></use>
+            </svg>
+        </div>
+        <div class="gallery_main_container">
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
             <div class="gallery_img_container">
-                <img src="../img/article-img.png" alt="gallery_img">
+                <img src="../ressource/img/article-img.png" alt="gallery_img">
             </div>
         </div>
     </main>
     <footer class="footer">
         <div class="footer_content">FOOTER</div>
     </footer>
-    <script src="script.js"></script>
+    <script src="../ressource/js/header_script.js"></script>
+    <script src="../ressource/js/gallery_script.js"></script>
 </body>
 </html>

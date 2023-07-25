@@ -1,12 +1,12 @@
-@import url("layouts/reset.css");
-@import url("layouts/template.css");
-@import url("layouts/header.css");
-@import url("layouts/main.css");
-@import url("layouts/form.css");
-@import url("layouts/article.css");
-@import url("layouts/gallery.css");
-@import url("layouts/footer.css");
-@import url("layouts/@media.css");
+@import url("ressource/layouts/reset.css");
+@import url("ressource/layouts/template.css");
+@import url("ressource/layouts/header.css");
+@import url("ressource/layouts/main.css");
+@import url("ressource/layouts/form.css");
+@import url("ressource/layouts/article.css");
+@import url("ressource/layouts/gallery.css");
+@import url("ressource/layouts/footer.css");
+@import url("ressource/layouts/@media.css");
 
 
 
