@@ -5,7 +5,7 @@ function fetchArticle(url) {
     .then(data => createArticles(data.jokes))// renvoie les donnée du tableau joke présent dans les DATA récupéré et les envoie dans la fonction createArticle
 }
 
-// fonction createArticles permettant de crée un article en exploitant les donnée récupéré dans la première fonction
+// -> ***** Création d'article via DATA function fetchArticle ***** <-
 function createArticles(jokes) { // création de la fonction createArticle
     const container = document.getElementsByClassName('main_container')[0]; // stockage du main_container dans la var container
     //for (let i = 0; i < jokes.length; i++) { // boucle pour chaques index du tableau jokes
@@ -34,10 +34,12 @@ function createArticles(jokes) { // création de la fonction createArticle
         articleDesContainer.appendChild(articleH3);// je définis articleh3 comme enfant de articleDesContainer
         articleDesContainer.appendChild(articleP);// je définis articleP comme enfant de articleDesContainer
         articleDesContainer.appendChild(articleA);// je définis articleA comme enfant de articleDesContainer
+        //--------------------------------------------------
+        
     }
 }
 
-// fonction de création Article dynamique via FORM
+// -> ***** création Article dynamique via FORM ***** <-
 function addArticles(title, text) { // création de la fonction createArticle
     const container = document.getElementsByClassName('main_container')[0]; // stockage du main_container dans la var container
     const article = document.createElement('article'); // création d'élément avec le tag article stocker dans la const article
@@ -59,35 +61,43 @@ function addArticles(title, text) { // création de la fonction createArticle
     articleA.textContent ='En savoir plus';// je définis le contenu du lien en dure
     articleA.href = 'https://developer.mozilla.org'; // je définis le href du lien
     //-------------------------------------------------
+    const deleteElement = document.createElement('button');
+    deleteElement.classList.add('delete_btn', 'btn');
+    deleteElement.textContent = 'Suprimmer';
+    // -> ***** LISTNER sur btn deleteEment -> Suprime l'article si click ***** <-
+    deleteElement.addEventListener("click", ()=>{
+        deleteElement.parentNode.parentNode.remove();
+    });
+    //-------------------------------------------------
     container.appendChild(article); // je défins article comme enfant de container
     article.appendChild(articleDesContainer);// je définis articleDesContainer comme enfant de article
     articleDesContainer.appendChild(articleH3);// je définis articleh3 comme enfant de articleDesContainer
     articleDesContainer.appendChild(articleP);// je définis articleP comme enfant de articleDesContainer
     articleDesContainer.appendChild(articleA);// je définis articleA comme enfant de articleDesContainer
+    articleDesContainer.appendChild(deleteElement);
 
 }
 
-// -> ***** CREATION ARTICLE DYNAMIQUE ***** <-
-fetchArticle('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10');
-// récupération des 10 dernier article API joke
 
 
-// -> ***** ACTUALISATION DYNAMIQUE 10 DERNIERS ARTICLES ***** <-
-btn = document.getElementById('actualiser'); 
-// récupération de l'élément actualiser dans la page HTML
-btn.addEventListener("click", ()=> { 
+// -> ***** Execute le scripte uniquement si DOM chargé ***** <-
+window.addEventListener("DOMContentLoaded", (event) => {
+    // -> ***** CREATION ARTICLE DYNAMIQUE ***** <-
+    fetchArticle('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10');
+
+    // -> ***** ACTUALISATION DYNAMIQUE 10 DERNIERS ARTICLES ***** <-
+    btn = document.getElementById('actualiser'); 
+    // récupération de l'élément actualiser dans la page HTML
+    btn.addEventListener("click", ()=> { 
+    // fonction addEventListener  pour le bouton actualiser
     //SI btn est cliquer alors recharge mon fetch
        fetchArticle('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10');
       } );  
-// fonction addEventListener  pour le bouton actualiser
 
-
-
-
-// -> ***** AJOUT ARTICLE VIA FORMULAIRE DYNAMIQUE***** <-
-let post = document.getElementById("poste");
-// stockage du bouton dans la var send
-post.addEventListener("click", (event)=> { 
+    // -> ***** AJOUT ARTICLE VIA FORMULAIRE DYNAMIQUE***** <-
+    let post = document.getElementById("poste");
+    post.addEventListener("click", (event)=> { 
+    // fonction Event SI btn send est "click ALORS"
     //addEventListner -> SI clique sur btn du form
     event.preventDefault();
     //preventDefault annule comportement du form par défaut lorsque il y a un clique sur post
@@ -100,4 +110,6 @@ post.addEventListener("click", (event)=> {
     document.getElementById("add_article").reset();
     // appel de l'élément form & reset formulaire avec fonction .reset
    } );
-// fonction Event SI btn send est "click ALORS"
+
+});
+

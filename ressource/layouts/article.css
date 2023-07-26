@@ -28,7 +28,12 @@
     font-weight: 400;
 }
 
-.article_btn {
+.article_btn, .delete {
     align-self: center;
     margin-top: 20px;
+    border: none;
+}
+
+.delete {
+    background: red;
 }
