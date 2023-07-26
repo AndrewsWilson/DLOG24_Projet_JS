@@ -80,4 +80,64 @@ window.addEventListener("DOMContentLoaded", (event) => {
         console.log(urlImg.value);
     } )
 
+
+
+    // -> ***** CAROUSSEL ***** <-
+        //appel du caroussel
+        const slides = document.querySelectorAll(".slide_caroussel")
+
+    // -> ***** APPLICATION TRANSFORMEX SUR IMG CARROUSSEL ***** <-
+    //  - boucle foreach sur objet slides
+    //  - pour chaque slide présente par index FAIRE
+    //  - ajouter style -> transform = translateX (100 x numéro index)
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * indx}%)`;
+        });
+
+
+
+    // -> ***** Bouton slide suivante ***** <- 
+        //- compteur slide actuel
+        let curSlide = 0;
+        //- slide maximum
+        const maxSlide = slides.length -1;
+        //- select bouton slide suivant
+        const nextSlide = document.querySelector('.btn_next');
+
+        nextSlide.addEventListener("click", ()=>{
+            if(curSlide == maxSlide){
+                curSlide = 0;
+
+            } else {
+                curSlide++;
+            }
+            // boucle foreach sur objet slides
+            // pour chaque slide présente par index FAIRE
+            // ajouter style -> transform = translateX (100 x numéro index - valeur curSlide)
+            slides.forEach((slide, indx) => {
+                slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+            });
+        })
+
+    // -> ***** Bouton slide precedent ***** <- 
+        //- compteur slide actuel
+        let prevSlide = document.querySelector('.btn_prev');
+
+        prevSlide.addEventListener("click", ()=> {
+            if(curSlide == 0) {
+                curSlide = maxSlide;
+            } else {
+                curSlide--;
+            }
+            // boucle foreach sur objet slides
+            // pour chaque slide présente par index FAIRE
+            // ajouter style -> transform = translateX (100 x numéro index - valeur curSlide)
+            slides.forEach((slide, indx) => {
+                slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+            });
+        })
+
+
+
 });
+

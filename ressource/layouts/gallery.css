@@ -1,3 +1,58 @@
+/*CAROUSSEL*/
+
+#carroussel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.slide_caroussel {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.slide_caroussel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn_slide {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;   
+    z-index: 1;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  
+  .btn:active {
+    transform: scale(1.1);
+  }
+  
+  .btn_prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn_next {
+    top: 45%;
+    right: 2%;
+  }
+
+/*--------------------------------------------*/
+
 .gallery_main{
     padding: 20px;
 }
