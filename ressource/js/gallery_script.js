@@ -38,11 +38,31 @@ display3.addEventListener("click", ()=> {
         img.classList.remove('d2');
         img.classList.add('d3');
     }
-    } );
-   
+    } );  
 
+// -> ***** Ajout d'image ***** <-
+    // fonction d'ajout d'image 
+function addImage(url) { // Fonction ajout d'image
+    const galleryContainer = document.querySelector('.gallery_main_container');
+    const imgContainer = document.createElement('div');
+    imgContainer.classList.add('gallery_img_container');
+    const img = document.createElement('img');
+    img.src = url.value;
+    img.alt = 'gallery_img';
+    galleryContainer.appendChild(imgContainer);
+    imgContainer.appendChild(img);
+}
+    // fonction affichage form ajout image
 const addImg = document.querySelector('#add_img');
 addImg.addEventListener("click", ()=>{
     inputContainer = document.querySelector('.input_add_img');
     inputContainer.classList.toggle("hide");
+} )
+
+    // fonction envoie de l'image avec appel fonciton ajout d'image
+const send = document.querySelector('#send');
+send.addEventListener("click", ()=>{
+    urlImg = document.querySelector('#addimg');
+    addImage(urlImg);
+    console.log(urlImg.value);
 } )
